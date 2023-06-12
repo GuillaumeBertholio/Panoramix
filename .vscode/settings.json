@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "semaphore": "cpp",
+        "pano.h": "c",
+        "threads.h": "c"
+    }
+}

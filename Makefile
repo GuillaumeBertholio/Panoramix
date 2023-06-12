@@ -4,23 +4,23 @@
 ## File description:
 ## Makefile
 ##
-SRC		=		Main.cpp			\
-				Villager.cpp		\
-				Druid.cpp
 
-CXXFLAGS	=	-Iinclude -std=c++20
-
-NAME	=		panoramix
+SRC		=		main.c		\
+				pano.c		\
+				villager.c
 
 $(eval SRC = $(addprefix src/, $(SRC)))
 
-OBJ		=		$(SRC:.cpp=.o)
+CFLAGS	=	-Iinclude
+
+NAME	=		panoramix
+
+OBJ		=		$(SRC:.c=.o)
 
 all:	$(NAME)
 
-
 $(NAME):	$(OBJ)
-		g++ -o $(NAME) $(OBJ)
+		gcc -o $(NAME) $(OBJ)
 
 clean:
 		rm -f $(OBJ)
